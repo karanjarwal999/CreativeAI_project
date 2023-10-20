@@ -1,0 +1,65 @@
+.title{
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+.file_input{
+    position: relative;
+    display: inline;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px 0px 5px 5px;
+    background-color: rgb(31, 30, 30);
+}
+.file_input>input{
+   accent-color: #FDAE59;
+}
+.file_note{
+    text-align: center;
+    color: rgba(255, 0, 0, 0.427);
+}
+.QandA_DIv{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgb(31, 30, 30);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    min-height: 400px;
+    padding: 20px;
+}
+.questionInput{
+    display: flex;
+    gap: 10px;
+}
+
+#Loader{
+    position: absolute;
+    right: 5px;
+    top: 10%;
+    height: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border:3px solid black ;
+    border-top:3px solid #FDAE59 ;
+    animation: loader 3s infinite ease;
+    -webkit-animation: loader 3s infinite ease;
+}
+
+@keyframes loader {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}

@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 4%;
+    background-color: #1A1C23;
+}
+.nanTitle{
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.NavHamburger{
+    display: none;
+}
+.navlinks{
+    display: flex;
+    gap: 20px;
+}
+.active{
+    color: #FDAE59;
+    text-decoration: underline #FDAE59;
+    text-underline-offset: 5px;
+}
+/* .navGitIcon{
+    height: 50px;
+} */
