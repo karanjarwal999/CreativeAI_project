@@ -105,3 +105,7 @@ a {
     color-scheme: dark;
   }
 }
+#ace-editor{
+  min-height: 500px !important;
+}
+

@@ -18,10 +18,59 @@
     gap: 20px;
 }
 .active{
-    color: #FDAE59;
+    color: #FDAE59 ;
     text-decoration: underline #FDAE59;
     text-underline-offset: 5px;
 }
-/* .navGitIcon{
-    height: 50px;
-} */
+.navGitIcon{
+    cursor: pointer;
+}
+.profilePhoto{
+    cursor: pointer;
+    position: relative;
+}
+.profilePhoto:hover>p{
+    display: block;
+}
+.profilePhoto>p{
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    transform: translateX(-30%);
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: gray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transform: translateX(-30%);
+    -moz-transform: translateX(-30%);
+    -ms-transform: translateX(-30%);
+    -o-transform: translateX(-30%);
+}
+.profilePhoto>img{
+    height: 35px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .navlinks{
+        display: none;
+    }
+    .NavHamburger{
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding:5px 3%;
+    }
+}
+
+
+

@@ -4,23 +4,30 @@ import React from "react";
 import Style from "../styles/components/Navbar.module.css";
 import { BsGithub } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { DiCss3 } from "react-icons/di";
-import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import {Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import Image from "next/image";
+require("dotenv").config;
 
-function Navbar() {
-  const router = useRouter();
+function Navbar({ token }) {
   const navLinks = [
     { text: "Code converter", endpoint: "/" },
     { text: "PDF Reader", endpoint: "/PdfReader" },
     { text: "CSS Prefixer", endpoint: "/PreFixer" },
   ];
 
+  const router = useRouter();
+
+  function connectUser() {
+    router.push(`${process.env.NEXT_PUBLIC_API_URL}/git_login`);
+  }
+
   return (
     <nav className={Style.navbar}>
       <h1 className={Style.nanTitle}>Creative.AI</h1>
       <ul className={Style.navlinks}>
-        {navLinks.map((link) => (
+        {navLinks.map((link, ind) => (
           <Link
+            key={ind}
             href={link.endpoint}
             className={
               router.pathname == link.endpoint ? Style.active : Style.Inactive
@@ -30,45 +37,44 @@ function Navbar() {
           </Link>
         ))}
       </ul>
-      <BsGithub className={Style.navGitIcon} size={"30px"}/>
-      <div className={Style.NavHamburger}>
-        <Menu>
-          <MenuButton>
-            <GiHamburgerMenu />
-          </MenuButton>
-          <MenuList>
-            <MenuItem icon={<DiCss3 />}>
-              <Link
-                href="/"
-                className={
-                  router.pathname == "/" ? Style.active : Style.Inactive
-                }
-              >
-                Code Converter
-              </Link>
-            </MenuItem>
-            <MenuItem icon={<DiCss3 />}>
-              <Link
-                href="/PreFixer"
-                className={
-                  router.pathname == "/PreFixer" ? Style.active : Style.Inactive
-                }
-              >
-                CSS PreFixer
-              </Link>
-            </MenuItem>
-            <MenuItem icon={<DiCss3 />}>
-              <Link
-                href="PdfReader"
-                className={
-                  router.pathname == "PdfReader" ? Style.active : Style.Inactive
-                }
-              >
-                PDF Reader
-              </Link>
-            </MenuItem>
-          </MenuList>
-        </Menu>
+      <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+        {token.username && token.image ? (
+          <div className={Style.profilePhoto}>
+            <img src={token.image} alt="Profile" />
+            <p>{token.username}</p>
+          </div>
+        ) : (
+          <BsGithub
+            className={Style.navGitIcon}
+            size={"25px"}
+            onClick={connectUser}
+          />
+        )}
+
+        <div className={Style.NavHamburger}>
+          <Menu>
+            <MenuButton>
+              <GiHamburgerMenu size={"25px"} />
+            </MenuButton>
+            <MenuList
+              display={"flex"}
+              flexDirection={"column"}
+              paddingBottom={'5px'}
+            >
+              {navLinks.map((link, ind) => (
+                <Link
+                  key={ind}
+                  href={link.endpoint}
+                  className={
+                    router.pathname == link.endpoint ? Style.active : Style.Inactive
+                  }
+                >
+                  <MenuItem bgColor={'black'} color={'white'}>{link.text}</MenuItem>
+                </Link>
+              ))}
+            </MenuList>
+          </Menu>
+        </div>
       </div>
     </nav>
   );

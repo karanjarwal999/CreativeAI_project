@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,8 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "ace-builds": "^1.30.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
     "framer-motion": "^10.16.4",
     "next": "13.5.5",
     "react": "^18",
