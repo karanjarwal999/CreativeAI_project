@@ -1,40 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next App with Flask Backend and Langchain Integration
+
+## Introduction
+
+This web application is built using Flask for the backend and incorporates Langchain to integrate OpenAI. It offers a variety of features including code conversion, CSS prefixing for responsive web design, a PDF reader with question generation capabilities, and GitHub integration for importing and exporting code.
+
+## Features
+
+### 1. Code Converter
+- The application allows users to convert code written in one language to another. This feature utilizes the power of OpenAI's language model.
+
+### 2. CSS Prefixer
+- Ensures that web pages are responsive across different versions and browsers by automatically adding appropriate CSS prefixes.
+
+### 3. PDF Reader
+- Users can upload PDF files and ask questions about the content. The application leverages OpenAI's language model to generate questions.
+
+### 4. GitHub Integration
+- Easily import code from your GitHub repositories and export modified code back to your repositories.
+
+## Usage
+
+### Code Converter
+
+1. Navigate to the "Code Converter" section.
+2. Enter the code in the source language and select the target language.
+3. Click on the "Convert" button to see the code converted to the target language.
+
+### CSS Prefixer
+
+1. Go to the "CSS Prefixer" section.
+2. Paste your CSS code into the provided text area.
+3. Click on the "Add Prefixes" button to automatically add appropriate CSS prefixes.
+
+### PDF Reader
+
+1. Visit the "PDF Reader" section.
+2. Upload a PDF file.
+3. Once uploaded, you can ask questions related to the content of the PDF. The application will generate answers based on the provided questions.
+
+### GitHub Integration
+
+1. Navigate to the "GitHub Integration" section.
+2. Click on the "Import from GitHub" button to select a repository and import code.
+3. Make your changes in the code editor and click on the "Export to GitHub" button to commit and push changes back to the repository.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the application:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository to your local machine.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the required dependencies by running:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. Start the Flask application by running: npm run dev
+   
+4. Access the web application at `http://localhost:5000`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Configuration
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Make sure to set up your OpenAI API key, Langchain integration credentials, and GitHub personal access token in the configuration file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-## Learn More
+If you'd like to contribute to the development of this application, please follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Create a new branch for your changes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Make your changes and commit them:
 
-## Deploy on Vercel
+4. Push to your branch:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Create a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Thanks to OpenAI, Langchain, and GitHub for providing the powerful tools and APIs used in this application.
+
+Enjoy using the Next App with Flask Backend and Langchain Integration! If you have any questions or feedback, please don't hesitate to reach out.
+
